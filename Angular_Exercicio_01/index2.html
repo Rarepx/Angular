@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/app2.js"></script>
+
+</head>
+<body ng-app="minhaAplicação"  ng-controller="meuController">
+
+    <label id="frutaEscolhida">Selecione uma Fruta: </label>
+    <select id="selecaoDeFrutas" ng-model="frutaEscolhida" ng-options="x for x in frutas">
+        <option value="" ng-show="false"></option>
+    </select>
+    <div ng-show="exibirFruta">
+        {{fruta}}
+        <div  id="imagemFruta"></div>
+
+
+</body>
+</html>

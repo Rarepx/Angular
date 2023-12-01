@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primeira coisa precisamos pegar a biblioteca -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Agora precisamos do nosso script -->
+    <script src="js/app.js" defer></script>
+    <!-- usamos o defer para carregar o código inteiro primeiro, depois o script -->
+</head>
+    <!-- precisamos fazer uma notação para ativar o angular  -->
+<body ng-app="minhaAplicação" ng-controller="meuController">
+            <!-- 
+            ng-app - adiciona um nome ao seu aplicativo
+            ng-controller - adiciona um controller ao seu código nós podemos colocar o controle em uma div,
+            é até melhor caso exista 2 controllers 
+            -->
+            <select id="selecaoDeFrutas" ng-model="frutaEscolhida">
+                <!-- O usuário irá selecionar uma fruta e será armazenada, nisso poderemos chamar essa variável por id  -->
+                <!-- agora vem as opções de frutas -->
+                <option value="abacaxi">Abacaxi</option>
+                <option value="maçã">Maçã</option>
+                <option value="pera">Pera</option>
+                <option value="laranja">laranja</option>
+                <!-- iremos colocar agora uma opção para tirar a opção vazia -->
+                <option value="" ng-show="false"></option>
+            </select>
+            <!-- Nessa parte do código mostramos o select com id de fruta escolhida -->
+            <p ng-show="frutaEscolhida">Você escolheu a fruta: {{frutaEscolhida}}</p>
+            <p>_______________________________________________________________________________________</p>
+
+</body>
+</html>
